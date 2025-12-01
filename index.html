@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShoreSquad - Rally your crew, track weather, and hit the next beach cleanup with our dope map app!">
+    <meta name="theme-color" content="#00A6E4">
+    <title>ShoreSquad - Beach Cleanup Community</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1><i class="fas fa-water"></i> ShoreSquad</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#map" class="nav-link">Map</a></li>
+                <li><a href="#weather" class="nav-link">Weather</a></li>
+                <li><a href="#crew" class="nav-link">My Crew</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><button class="btn btn-primary" id="joinBtn">Join Cleanup</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Rally Your Crew</h2>
+            <p>Track weather, plan cleanups, and make beach conservation fun with your squad</p>
+            <button class="btn btn-primary btn-large" id="ctaBtn">Start Your Cleanup</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Map Section -->
+        <section id="map" class="section map-section">
+            <div class="container">
+                <h2>Find Beaches Near You</h2>
+                <div class="map-container">
+                    <div id="mapElement" class="map-placeholder">
+                        <i class="fas fa-map-location-dot"></i>
+                        <p>Interactive map will load here</p>
+                    </div>
+                </div>
+                <div class="beaches-grid" id="beachesGrid">
+                    <!-- Beach cards will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather" class="section weather-section">
+            <div class="container">
+                <h2>Weather Conditions</h2>
+                <div class="weather-cards" id="weatherCards">
+                    <!-- Weather info will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Crew Section -->
+        <section id="crew" class="section crew-section">
+            <div class="container">
+                <h2>Your Crew</h2>
+                <div class="crew-container">
+                    <div class="crew-list" id="crewList">
+                        <!-- Crew members will be dynamically generated -->
+                    </div>
+                    <button class="btn btn-secondary" id="addCrewBtn">Add Crew Member</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section events-section">
+            <div class="container">
+                <h2>Upcoming Cleanups</h2>
+                <div class="events-list" id="eventsList">
+                    <!-- Events will be dynamically generated -->
+                </div>
+                <button class="btn btn-primary" id="createEventBtn">Create Event</button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section features-section">
+            <div class="container">
+                <h2>Why ShoreSquad?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-location-dot"></i>
+                        <h3>Interactive Maps</h3>
+                        <p>Discover beaches and cleanup hotspots with real-time mapping</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Live Weather</h3>
+                        <p>Check conditions before heading out for maximum comfort</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Crew Management</h3>
+                        <p>Rally your squad and stay connected throughout the cleanup</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-calendar"></i>
+                        <h3>Event Planning</h3>
+                        <p>Schedule and organize cleanups with your community</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ShoreSquad. Rally your crew, clean the shore. 🌊</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for creating events -->
+    <div id="eventModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Create New Cleanup Event</h3>
+            <form id="eventForm">
+                <input type="text" placeholder="Event Name" required aria-label="Event Name">
+                <input type="date" required aria-label="Event Date">
+                <input type="time" required aria-label="Event Time">
+                <textarea placeholder="Description" aria-label="Event Description"></textarea>
+                <button type="submit" class="btn btn-primary">Create Event</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

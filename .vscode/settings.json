@@ -1,0 +1,19 @@
+{
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.AdvanceCustomServerModule": "",
+  "liveServer.settings.CustomServerModule": "",
+  "liveServer.settings.LaunchURL": "http://localhost:5500",
+  "liveServer.settings.ignoreFiles": [
+    ".gitignore",
+    ".git",
+    "node_modules/**",
+    "**/*.scss",
+    "**/*.sass"
+  ],
+  "liveServer.settings.root": "/",
+  "liveServer.settings.useWebExt": false,
+  "liveServer.settings.useExternalExt": false,
+  "liveServer.settings.formatOnSave": false,
+  "liveServer.settings.RemoteConnection": false,
+  "liveServer.settings.RemoteUrl": ""
+}
