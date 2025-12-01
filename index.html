@@ -46,10 +46,44 @@
         <section id="map" class="section map-section">
             <div class="container">
                 <h2>Find Beaches Near You</h2>
+                <div class="map-section-header">
+                    <div class="next-cleanup-info">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <h3>Next Cleanup Spot</h3>
+                            <p><strong>Pasir Ris</strong> - Street View Asia</p>
+                            <p class="coordinates">📍 1.381497°N, 103.955574°E</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="map-container">
-                    <div id="mapElement" class="map-placeholder">
-                        <i class="fas fa-map-location-dot"></i>
-                        <p>Interactive map will load here</p>
+                    <!-- Google Maps Iframe with Pasir Ris Location -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7936891891006!2d103.95557400000001!3d1.381497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a2c5c5c5c5d%3A0x1234567890abcdef!2sPasir%20Ris%20Beach!5e0!3m2!1sen!2ssg!4v1701417600000" 
+                        width="100%" 
+                        height="500" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="google-map-iframe">
+                    </iframe>
+                </div>
+                <div class="map-info-box">
+                    <h3>Next Cleanup: Pasir Ris Beach</h3>
+                    <p>Join us at Pasir Ris Beach for our next environmental cleanup initiative. The location marked above shows Street View Asia where we'll begin our cleanup efforts.</p>
+                    <div class="map-details">
+                        <div class="detail-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span><strong>Location:</strong> Pasir Ris, Singapore</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-coordinates"></i>
+                            <span><strong>Coordinates:</strong> 1.381497°N, 103.955574°E</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Event Details:</strong> Check the Events section for date & time</span>
+                        </div>
                     </div>
                 </div>
                 <div class="beaches-grid" id="beachesGrid">

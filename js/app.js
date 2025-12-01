@@ -23,6 +23,17 @@ const ShoreSquad = {
     ],
     beaches: [
       {
+        id: 0,
+        name: 'Pasir Ris Beach',
+        location: 'Pasir Ris, Singapore',
+        difficulty: 'Easy',
+        description: 'Our next cleanup location! Join us at Street View Asia, Pasir Ris for an impactful beach conservation effort.',
+        image: 'https://via.placeholder.com/400x300?text=Pasir+Ris+Beach',
+        coords: { lat: 1.381497, lng: 103.955574 },
+        featured: true,
+        nextCleanup: true,
+      },
+      {
         id: 1,
         name: 'Sunset Beach',
         location: 'Santa Monica, CA',
@@ -51,6 +62,16 @@ const ShoreSquad = {
       },
     ],
     events: [
+      {
+        id: 0,
+        name: 'Pasir Ris Beach Cleanup Initiative',
+        beach: 'Pasir Ris Beach',
+        date: '2025-12-08',
+        time: '09:00',
+        attendees: 15,
+        description: 'Join our crew at Pasir Ris Beach for an impactful cleanup! Starting at Street View Asia. All equipment provided. Great for beginners!',
+        featured: true,
+      },
       {
         id: 1,
         name: 'Summer Cleanup Splash',
@@ -154,7 +175,7 @@ const ShoreSquad = {
 
   createBeachCard(beach) {
     const card = document.createElement('div');
-    card.className = 'beach-card';
+    card.className = 'beach-card' + (beach.featured ? ' featured' : '');
     card.innerHTML = `
       <img src="${beach.image}" alt="${beach.name}" loading="lazy">
       <div class="beach-card-content">
